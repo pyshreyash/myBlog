@@ -11,3 +11,4 @@ In this blog, I'm jumping straigt into the implementation of Word2Vec and try to
 $$ x=1 $$
 \[
 f(x) = x^2 + x + 1\]
+# This article is under development

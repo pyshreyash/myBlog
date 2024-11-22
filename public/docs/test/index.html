@@ -9,8 +9,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="Python and Numpy based implementation for the Word2Vec (Mikolov et al)
 Well vector embeddings play crucial role in deep learning as modern neural nets feed on them. In order to apply neural networks on NLP tasks we need to crunch down the language/words to numbers. There&rsquo;s where word embedding come in play. [link] explains more about this concepts and how they if you are new to the field.
-$$ x=1 $$\[
-f(x) = x^2 &#43; x &#43; 1\]">
+In this blog, I&rsquo;m jumping straigt into the implementation of Word2Vec and try to replicate the [Mikolov et al, 2014] paper. My intention is to go through the bits and pieces of the algorithms proposed in the paper.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/myBlog/docs/test/">
 <link crossorigin="anonymous" href="/myBlog/assets/css/stylesheet.d72444526d7ecbdb0015438a7fa89054a658bf759d0542e2e5df81ce94b493ee.css" integrity="sha256-1yREUm1&#43;y9sAFUOKf6iQVKZYv3WdBULi5d&#43;BzpS0k&#43;4=" rel="preload stylesheet" as="style">
@@ -104,8 +103,11 @@ f(x) = x^2 &#43; x &#43; 1\]">
   </header> 
   <div class="post-content"><h3 id="python-and-numpy-based-implementation-for-the-word2vec-mikolov-et-al">Python and Numpy based implementation for the Word2Vec (Mikolov et al)<a hidden class="anchor" aria-hidden="true" href="#python-and-numpy-based-implementation-for-the-word2vec-mikolov-et-al">#</a></h3>
 <p>Well vector embeddings play crucial role in deep learning as modern neural nets feed on them. In order to apply neural networks on NLP tasks we need to crunch down the language/words to numbers. There&rsquo;s where word embedding come in play. [link] explains more about this concepts and how they if you are new to the field.</p>
-$$ x=1 $$\[
-f(x) = x^2 + x + 1\]
+<p>In this blog, I&rsquo;m jumping straigt into the implementation of Word2Vec and try to replicate the [Mikolov et al, 2014] paper. My intention is to go through the bits and pieces of the algorithms proposed in the paper.</p>
+<p>We now formulate the object function in case of Naive Softmax,</p>
+\[J(\theta) = -\sum{y_k \log{\frac{\exp{u_iu_{t}^T}}{\sum{\exp{u_ku_{t}^T}}}}}\]\[=-\sum{a_k\log{\frac{\exp{u_iu_{t}^T}}{\sum{\exp{u_pu_{t}^T}}}}}\]\[\implies L = -\sum{\log{y_{t+j}}}\]<p>Now, calculating the gradients w.r.t learnable parameter embedding matrix \(V\) and \(U\)</p>
+\[\frac{\partial J}{\partial V} = [\frac{\partial J}{\partial v_0}, \frac{\partial J}{\partial v_1}, .... , \frac{\partial J}{\partial v_t}, .. \frac{\partial J}{\partial v_{N-1}}]\]\[=[0, 0, ... , \frac{\partial J}{\partial v_t}, ..., 0]\]<p>For,</p>
+\[\frac{\partial J}{\partial v_t} = \sum{U_j^T}\]
 
   </div>
 

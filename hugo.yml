@@ -1,16 +1,17 @@
 baseURL: "https://pyshreyash.github.io/myBlog/"
 languageCode: en-us
-title:
+title: Shreyash's Blog
 theme: PaperMod
-
-
 enableEmoji: true
 
+
 params:
+  title: Personal Blog
   homeInfoParams:
-    Title: Shreyash Bhilwade
+    Title: Machine Learning | Hardware | Data Science
     Content: Welcome to my Blog!👋🏻
 
+  description: Personal Blog
   hideFooter: true
   disableThemeToggle: true
   ShowBreadCrumbs: true
@@ -20,3 +21,18 @@ params:
       url: "https://github.com/pyshreyash"
     - name: LinkedIn
       url: "https://www.linkedin.com/in/shreyash-bhilwade-2769b7233/"
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true

@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Docs on </title>
+    <title>Docs on Shreyash&#39;s Blog</title>
     <link>http://localhost:1313/myBlog/docs/</link>
-    <description>Recent content in Docs on </description>
+    <description>Recent content in Docs on Shreyash&#39;s Blog</description>
     <generator>Hugo -- 0.139.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Nov 2024 14:28:01 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/myBlog/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
+      <title>Implementing Word2Vec from scratch (including the backpropogation)</title>
       <link>http://localhost:1313/myBlog/docs/test/</link>
       <pubDate>Fri, 22 Nov 2024 14:28:01 +0530</pubDate>
       <guid>http://localhost:1313/myBlog/docs/test/</guid>
-      <description>&lt;h3 id=&#34;this-is-my-test-page&#34;&gt;This is my test page&lt;/h3&gt;
-&lt;p&gt;please ignore this test page&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;python-and-numpy-based-implementation-for-the-word2vec-mikolov-et-al&#34;&gt;Python and Numpy based implementation for the Word2Vec (Mikolov et al)&lt;/h3&gt;
+&lt;p&gt;Well vector embeddings play crucial role in deep learning as modern neural nets feed on them. In order to apply neural networks on NLP tasks we need to crunch down the language/words to numbers. There&amp;rsquo;s where word embedding come in play. [link] explains more about this concepts and how they if you are new to the field.&lt;/p&gt;
+$$ x=1 $$\[
+f(x) = x^2 + x + 1\]</description>
     </item>
   </channel>
 </rss>

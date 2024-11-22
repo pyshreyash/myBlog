@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>ML | Hardware | Fiction</title>
+<title></title>
 
 <meta name="description" content="">
 <meta name="author" content="">
@@ -58,19 +58,17 @@
 
     </style>
 </noscript><meta property="og:url" content="https://pyshreyash.github.io/myBlog/">
-  <meta property="og:site_name" content="ML | Hardware | Fiction">
-  <meta property="og:title" content="ML | Hardware | Fiction">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ML | Hardware | Fiction">
+<meta name="twitter:title" content="">
 <meta name="twitter:description" content="">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "ML | Hardware | Fiction",
+  "name": "",
   "url": "https://pyshreyash.github.io/myBlog/",
   "description": "",
   "logo": "https://pyshreyash.github.io/myBlog/favicon.ico",
@@ -83,11 +81,7 @@
 
 <body class="list" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -96,28 +90,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://pyshreyash.github.io/myBlog/" accesskey="h" title="ML | Hardware | Fiction (Alt + H)">ML | Hardware | Fiction</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
             </div>
         </div>
         <ul id="menu">
@@ -159,27 +132,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Test
+    <h2 class="entry-hint-parent">Implementing Word2Vec from scratch (including the backpropogation)
     </h2>
   </header>
   <div class="entry-content">
-    <p>This is my test page please ignore this test page
+    <p>Python and Numpy based implementation for the Word2Vec (Mikolov et al) please ignore this test page
 </p>
   </div>
   <footer class="entry-footer"><span title='2024-11-22 14:28:01 +0530 +0530'>November 22, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Test" href="https://pyshreyash.github.io/myBlog/docs/test/"></a>
+  <a class="entry-link" aria-label="post link to Implementing Word2Vec from scratch (including the backpropogation)" href="https://pyshreyash.github.io/myBlog/docs/test/"></a>
 </article>
     </main>
     
-<footer class="footer">
-        <span>&copy; 2024 <a href="https://pyshreyash.github.io/myBlog/">ML | Hardware | Fiction</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
@@ -226,18 +190,6 @@
             mybutton.style.opacity = "0";
         }
     };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 </body>

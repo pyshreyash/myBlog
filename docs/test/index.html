@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Test | ML | Hardware | Fiction</title>
+<title>Implementing Word2Vec from scratch (including the backpropogation) | </title>
 <meta name="keywords" content="">
-<meta name="description" content="This is my test page
+<meta name="description" content="Python and Numpy based implementation for the Word2Vec (Mikolov et al)
 please ignore this test page">
 <meta name="author" content="">
 <link rel="canonical" href="https://pyshreyash.github.io/myBlog/docs/test/">
@@ -57,17 +57,16 @@ please ignore this test page">
 
     </style>
 </noscript><meta property="og:url" content="https://pyshreyash.github.io/myBlog/docs/test/">
-  <meta property="og:site_name" content="ML | Hardware | Fiction">
-  <meta property="og:title" content="Test">
-  <meta property="og:description" content="This is my test page please ignore this test page">
+  <meta property="og:title" content="Implementing Word2Vec from scratch (including the backpropogation)">
+  <meta property="og:description" content="Python and Numpy based implementation for the Word2Vec (Mikolov et al) please ignore this test page">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2024-11-22T14:28:01+05:30">
     <meta property="article:modified_time" content="2024-11-22T14:28:01+05:30">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Test">
-<meta name="twitter:description" content="This is my test page
+<meta name="twitter:title" content="Implementing Word2Vec from scratch (including the backpropogation)">
+<meta name="twitter:description" content="Python and Numpy based implementation for the Word2Vec (Mikolov et al)
 please ignore this test page">
 
 
@@ -85,7 +84,7 @@ please ignore this test page">
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Test",
+      "name": "Implementing Word2Vec from scratch (including the backpropogation)",
       "item": "https://pyshreyash.github.io/myBlog/docs/test/"
     }
   ]
@@ -95,14 +94,14 @@ please ignore this test page">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Test",
-  "name": "Test",
-  "description": "This is my test page please ignore this test page\n",
+  "headline": "Implementing Word2Vec from scratch (including the backpropogation)",
+  "name": "Implementing Word2Vec from scratch (including the backpropogation)",
+  "description": "Python and Numpy based implementation for the Word2Vec (Mikolov et al) please ignore this test page\n",
   "keywords": [
     
   ],
-  "articleBody": "This is my test page please ignore this test page\n",
-  "wordCount" : "10",
+  "articleBody": "Python and Numpy based implementation for the Word2Vec (Mikolov et al) please ignore this test page\n",
+  "wordCount" : "16",
   "inLanguage": "en",
   "datePublished": "2024-11-22T14:28:01+05:30",
   "dateModified": "2024-11-22T14:28:01+05:30",
@@ -112,7 +111,7 @@ please ignore this test page">
   },
   "publisher": {
     "@type": "Organization",
-    "name": "ML | Hardware | Fiction",
+    "name": "",
     "logo": {
       "@type": "ImageObject",
       "url": "https://pyshreyash.github.io/myBlog/favicon.ico"
@@ -124,11 +123,7 @@ please ignore this test page">
 
 <body class="" id="top">
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -137,28 +132,7 @@ please ignore this test page">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://pyshreyash.github.io/myBlog/" accesskey="h" title="ML | Hardware | Fiction (Alt + H)">ML | Hardware | Fiction</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
             </div>
         </div>
         <ul id="menu">
@@ -169,15 +143,15 @@ please ignore this test page">
 
 <article class="post-single">
   <header class="post-header">
-    
+    <div class="breadcrumbs"><a href="https://pyshreyash.github.io/myBlog/">Home</a>&nbsp;»&nbsp;<a href="https://pyshreyash.github.io/myBlog/docs/">Docs</a></div>
     <h1 class="post-title entry-hint-parent">
-      Test
+      Implementing Word2Vec from scratch (including the backpropogation)
     </h1>
     <div class="post-meta"><span title='2024-11-22 14:28:01 +0530 +0530'>November 22, 2024</span>
 
 </div>
   </header> 
-  <div class="post-content"><h3 id="this-is-my-test-page">This is my test page<a hidden class="anchor" aria-hidden="true" href="#this-is-my-test-page">#</a></h3>
+  <div class="post-content"><h3 id="python-and-numpy-based-implementation-for-the-word2vec-mikolov-et-al">Python and Numpy based implementation for the Word2Vec (Mikolov et al)<a hidden class="anchor" aria-hidden="true" href="#python-and-numpy-based-implementation-for-the-word2vec-mikolov-et-al">#</a></h3>
 <p>please ignore this test page</p>
 
 
@@ -190,15 +164,6 @@ please ignore this test page">
 </article>
     </main>
     
-<footer class="footer">
-        <span>&copy; 2024 <a href="https://pyshreyash.github.io/myBlog/">ML | Hardware | Fiction</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
@@ -245,18 +210,6 @@ please ignore this test page">
             mybutton.style.opacity = "0";
         }
     };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 </body>

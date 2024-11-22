@@ -23,8 +23,8 @@ jobs:
 
       - name: Setup Hugo
         run: |
-          wget -O ${{RUNNER_TEMP}}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.137.1/hugo_extended_0.137.1_linux-amd64.deb \
-          && sudo dpkg -i ${{RUNNER_TEMP}}/hugo.deb hugo       
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.137.1/hugo_extended_0.137.1_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb hugo       
       - name: Build
         run: ${RUNNER_TEMP}/hugo
 

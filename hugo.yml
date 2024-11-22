@@ -4,6 +4,7 @@ title: ML | Hardware | Fiction
 theme: PaperMod
 
 enableEmoji: true
+hideFooter: true
 
 params:
   homeInfoParams:

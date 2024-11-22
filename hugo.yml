@@ -1,31 +1,17 @@
 baseURL: "https://pyshreyash.github.io/myBlog/"
 languageCode: en-us
-title: Home
+title: ML | Hardware | Fiction
 theme: PaperMod
 
+enableEmoji: true
 
 params:
   homeInfoParams:
     Title: Shreyash Bhilwade
-    Content: Welcome to my Blog!
+    Content: Welcome to my Blog!👋🏻
 
   socialIcons:
-    - name: "<platform>"
-      url: "<link>"
-    - name: "<platform 2>"
-      url: "<link2>"
-
-menu:
-  main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
+    - name: GitHub
+      url: "https://github.com/pyshreyash"
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/shreyash-bhilwade-2769b7233/"

@@ -3,3 +3,29 @@ languageCode: en-us
 title: My New Hugo Site
 theme: PaperMod
 
+
+params:
+  homeInfoParams:
+    Title: Shreyash Bhilwade
+    Content: Welcome to my Blog!
+
+  socialIcons:
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
+
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: example.org
+      url: https://example.org
+      weight: 30

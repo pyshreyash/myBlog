@@ -15,8 +15,7 @@
       <guid>https://pyshreyash.github.io/myBlog/docs/test/</guid>
       <description>&lt;h3 id=&#34;python-and-numpy-based-implementation-for-the-word2vec-mikolov-et-al&#34;&gt;Python and Numpy based implementation for the Word2Vec (Mikolov et al)&lt;/h3&gt;
 &lt;p&gt;Well vector embeddings play crucial role in deep learning as modern neural nets feed on them. In order to apply neural networks on NLP tasks we need to crunch down the language/words to numbers. There&amp;rsquo;s where word embedding come in play. [link] explains more about this concepts and how they if you are new to the field.&lt;/p&gt;
-$$ x=1 $$\[
-f(x) = x^2 + x + 1\]&lt;h1 id=&#34;this-article-is-under-development&#34;&gt;This article is under development&lt;/h1&gt;</description>
+&lt;p&gt;In this blog, I&amp;rsquo;m jumping straigt into the implementation of Word2Vec and try to replicate the [Mikolov et al, 2014] paper. My intention is to go through the bits and pieces of the algorithms proposed in the paper.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

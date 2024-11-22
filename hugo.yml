@@ -1,15 +1,19 @@
 baseURL: "https://pyshreyash.github.io/myBlog/"
 languageCode: en-us
-title: ML | Hardware | Fiction
+title:
 theme: PaperMod
 
+
 enableEmoji: true
-hideFooter: true
 
 params:
   homeInfoParams:
     Title: Shreyash Bhilwade
     Content: Welcome to my Blog!👋🏻
+
+  hideFooter: true
+  disableThemeToggle: true
+  ShowBreadCrumbs: true
 
   socialIcons:
     - name: GitHub
